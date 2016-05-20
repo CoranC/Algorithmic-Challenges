@@ -1,3 +1,2 @@
-#Codewars
-A repository for challenges undertaken or inspired from Codewars.com.
-Other challenges similar to Codewars challenges will also be housed here.
+#Algorithmic Challenges
+A repository for algorithmic challenges. Many challenges are undertaken from courses or online coding challenge sites.
