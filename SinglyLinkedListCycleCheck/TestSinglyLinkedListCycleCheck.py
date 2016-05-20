@@ -10,13 +10,11 @@ class SinglyLinkedListCycleCheckTest(unittest.TestCase):
     self.c = SinglyLinkedListCycleCheck.Node(3)
 
   def testNoCycle(self):
-    print "testNoCycle"
     self.a.next = self.b
     self.b.next = self.c
     self.assertEquals(cycle_check(self.a), False)
 
   def testCycle(self):
-    print "testCycle"
     self.a.next = self.b
     self.b.next = self.c
     self.c.next = self.a
