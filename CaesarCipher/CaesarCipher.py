@@ -8,7 +8,7 @@ class CaesarCipher(object):
   ALPHABET = string.ascii_uppercase
   SIZE = len(ALPHABET)
 
-  def __init__(self, rotation=0):
+  def __init__(self, rotation=65): # 65 is numerical representation of 'A'
     self._rotation = rotation
 
   @property
@@ -30,7 +30,7 @@ class CaesarCipher(object):
     Returns:
       The new character based on the rotation amount.
     """
-    return self.ALPHABET[(self.ALPHABET.find(char) - rotate) % self.SIZE]
+    return self.ALPHABET[(ord(char) - rotate) % self.SIZE]
 
   def _code(self, text, rotate):
     """
