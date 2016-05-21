@@ -18,12 +18,12 @@ class CaesarCipherTest(unittest.TestCase):
 
   def testRotationGetter(self):
     print "running test_rotation"
-    self.assertEquals(self.cipher.rotation, 3)
+    self.assertEquals(self.cipher.rotation, CaesarCipher.ROTATION_CONSTANT + 3)
 
   def testRotationSetter(self):
     print "running test_rotation_setterself"
     self.cipher.rotation = 10
-    self.assertEquals(self.cipher.rotation, 10)
+    self.assertEquals(self.cipher.rotation, CaesarCipher.ROTATION_CONSTANT + 10)
 
   def testRotationDeleter(self):
     print "running test_rotation_deleter"
