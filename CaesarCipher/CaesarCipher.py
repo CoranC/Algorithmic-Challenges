@@ -1,5 +1,9 @@
 import string
 
+# 65 is numerical representation of 'A'
+ROTATION_CONSTANT = ord('A')
+
+
 class CaesarCipher(object):
   """
   A CaesarCipher class that encodes or decodes a string based on a specified
@@ -9,15 +13,16 @@ class CaesarCipher(object):
   SIZE = len(ALPHABET)
 
   def __init__(self, rotation=0):
-    self._rotation = rotation
+    self._rotation = rotation + ROTATION_CONSTANT
 
   @property
   def rotation(self):
     return self._rotation
-
+ 
   @rotation.setter
   def rotation(self, rotation):
-    self._rotation = rotation
+    self._rotation = rotation + ROTATION_CONSTANT
+
 
   def char_rotate_pos(self, char, rotate):
     """
@@ -30,7 +35,7 @@ class CaesarCipher(object):
     Returns:
       The new character based on the rotation amount.
     """
-    return self.ALPHABET[(self.ALPHABET.find(char) - rotate) % self.SIZE]
+    return self.ALPHABET[(ord(char) - rotate) % self.SIZE]
 
   def _code(self, text, rotate):
     """
@@ -62,6 +67,7 @@ class CaesarCipher(object):
     Returns:
       The result from _code.
     """
+    return self._code(text, self.rotation)
 
   def decode(self, text):
     """
