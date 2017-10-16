@@ -1,9 +1,9 @@
-#Largest Continuous Sum
+# Largest Continuous Sum
 
-##Definition
+## Definition
 Given an array of integers (positive and negative), find the largest continuous sum.
 
-##Task
+## Task
 1. Create a large_cont_sum function.
 2. Assume inputs will be numeric types.
 3. Assume no empty inputs.
