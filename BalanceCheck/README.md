@@ -1,9 +1,9 @@
-#Parentheses Balance Check
+# Parentheses Balance Check
 
-##Definition
+## Definition
 Given a string of opening and closing parentheses, check whether it's balanced.
 
-##Task
+## Task
 1. Create a balance_check function to ensure the brackets are balanced.
 2. Assume the input is not empty.
 3. The input can contain characters other than parenthesis which shouldn't affect the algorithm.
